@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "react-app",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "**/test*.ts*",
+          "**/setupTests.ts"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+    "import/extensions": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_+$",
+        "argsIgnorePattern": "^_+$",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_+$",
+        "argsIgnorePattern": "^_+$",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
